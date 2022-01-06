@@ -1,112 +1,102 @@
 import React from "react";
-import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
-import TeamIllustrationSrc from "images/team-illustration-2.svg";
+import tw from "twin.macro";
+//eslint-disable-next-line
+import { css } from "styled-components/macro";
+import { SectionHeading } from "components/misc/Headings.js";
+import defaultCardImage from "../../images/shield-icon.svg";
+import SavingIcon from "../../images/piggy-bank-solid.svg";
+import CreditIcon from "../../images/gauge-solid.svg";
+import ResoucesIcon from "../../images/resource.png";
+
 
 const Container = tw.div`relative`;
-const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
-const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
-const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto`;
-const TextColumn = styled(Column)(props => [
-  tw`md:w-7/12 mt-16 md:mt-0`,
-  props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`
-]);
 
-const Image = styled.div(props => [
-  `background-image: url("${props.imageSrc}");`,
-  tw`rounded bg-contain bg-no-repeat bg-center h-full`
-]);
-const TextContent = tw.div`lg:py-8 text-center md:text-left`;
+const ThreeColumnContainer = styled.div`
+  ${tw`flex flex-col items-start md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
+`;
+const Heading = tw(SectionHeading)`w-full ml-6 text-left text-primary-100`;
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`;
-const Heading = tw(
-  SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
+const Column = styled.div`
+  ${tw`md:w-1/2 lg:w-1/2 flex`}
+`;
 
-const Features = tw.div`mt-8 max-w-sm mx-auto md:mx-0`;
-const Feature = tw.div`mt-8 flex items-start flex-col md:flex-row`;
+const Card = styled.div`
+  ${tw`flex px-6 py-10 border-2 border-primary-600 bg-white rounded-lg mt-12`}
+  .imageContainer {
+    ${tw`border-2 border-primary-500 text-center rounded-full p-2 flex-shrink-0 relative`}
+    img {
+      ${tw`w-20 h-20`}
+    }
+  }
 
-const FeatureIconContainer = styled.div`
-  ${tw`mx-auto inline-block border border-primary-500 text-center rounded-full p-2 flex-shrink-0`}
-  svg {
-    ${tw`w-5 h-5 text-primary-500`}
+  .textContainer {
+    ${tw`mt-2 mx-6 text-left`}
+  }
+
+  .title {
+    ${tw`font-bold text-xl leading-none text-primary-600`}
+  }
+
+  .description {
+    ${tw`mt-3 font-semibold text-secondary-100 text-sm leading-loose`}
   }
 `;
 
-const FeatureText = tw.div`mt-4 md:mt-0 md:ml-4 text-center md:text-left`;
-const FeatureHeading = tw.div`font-bold text-lg text-primary-500`;
-const FeatureDescription = tw.div`mt-1 text-sm`;
 
-const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0`;
-
-export default ({
-  subheading = "Our Expertise",
-  heading = (
-    <>
-      We have the most <span tw="text-primary-500">professional</span> marketing team.
-    </>
-  ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "See Our Portfolio",
-  primaryButtonUrl = "https://timerse.com",
-  features = null,
-  textOnLeft = true
-}) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
-
+export default () => {
   /*
-   * Change the features variable as you like, add or delete objects
-   * `icon` must be a React SVG component. See how BriefcaseIcon is imported above. For a full list of available icons, see Feather Icons.
+   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component):
+   *  1) imageSrc - the image shown at the top of the card
+   *  2) title - the title of the card
+   *  3) description - the description of the card
+   *  If a key for a particular card is not provided, a default value is used
    */
-  const defaultFeatures = [
-    {
-      Icon: BriefcaseIcon,
-      title: "Professionalism",
-      description: "We have the best professional marketing people across the globe just to work with you."
-    },
-    {
-      Icon: MoneyIcon,
-      title: "Affordable",
-      description: "We promise to offer you the best rate we can - at par with the industry standard."
-    }
-  ];
 
-  if (!features) features = defaultFeatures;
+  const cards = [
+    {
+      imageSrc: CreditIcon,
+      title: "Affordable Payments",
+      description: "Payments are tied to your income so they remain affordable and you always have peace of mind."
+    },
+    { imageSrc: SavingIcon, 
+      title: "Payment Cap",
+      description: "There is a limit to how much you will repay. Once the payment cap is reached, your ISA obligation will be fulfilled."
+    },
+    { imageSrc: ResoucesIcon,
+      title: "Deferrals",
+      description: "We don’t require a payment when your income falls below the minimum payment threshold."
+    },
+    { imageSrc: ResoucesIcon,
+      title: "Prepayment",
+      description: "You will always be able to make extra payments and reduce your ISA term one month at a time."
+    },
+    { imageSrc: ResoucesIcon,
+      title: "Fixed Term",
+      description: "Unlike loans which can have a growing balance, there is a definitive end date to your ISA so you know exactly when your servicing will end."
+    },
+  ];
 
   return (
     <Container>
-      <TwoColumn>
-        <ImageColumn>
-          <Image imageSrc={TeamIllustrationSrc} />
-        </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            <Subheading>{subheading}</Subheading>
-            <Heading>{heading}</Heading>
-            <Description>{description}</Description>
-            <Features>
-              {features.map((feature, index) => (
-                <Feature key={index}>
-                  <FeatureIconContainer>{<feature.Icon />}</FeatureIconContainer>
-                  <FeatureText>
-                    <FeatureHeading>{feature.title}</FeatureHeading>
-                    <FeatureDescription>{feature.description}</FeatureDescription>
-                  </FeatureText>
-                </Feature>
-              ))}
-            </Features>
-            <PrimaryButton as="a" href={primaryButtonUrl}>
-              {primaryButtonText}
-            </PrimaryButton>
-          </TextContent>
-        </TextColumn>
-      </TwoColumn>
+      <ThreeColumnContainer>
+        <Heading><p tw="text-black text-base">Safeguards</p>Consumer Protections</Heading>
+        {cards.map((card, i) => (
+          <Column key={i}>
+            <Card >
+              <span className="imageContainer">
+                <img src={card.imageSrc || defaultCardImage} alt="" />
+              </span>
+              <span className="textContainer">
+                <span className="title">{card.title || "Fully Secure"}</span>
+                <p className="description">
+                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud. Sic Semper Tyrannis. Neoas Calie artel."}
+                </p>
+              </span>
+            </Card>
+          </Column>
+        ))}
+      </ThreeColumnContainer>
     </Container>
   );
 };

@@ -245,7 +245,7 @@ module.exports = {
       'col-resize': 'col-resize',
     },
     fill: {
-      current: 'currentColor',
+      current: '#fff',
     },
     flex: {
       '100': '1 1 100%',

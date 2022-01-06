@@ -4,44 +4,39 @@ import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 import { SectionHeading } from "components/misc/Headings.js";
-
 import defaultCardImage from "../../images/shield-icon.svg";
+import SavingIcon from "../../images/piggy-bank-solid.svg";
+import CreditIcon from "../../images/gauge-solid.svg";
+import ResoucesIcon from "../../images/resource.png";
+import { PrimaryButton } from "components/misc/Buttons";
 
-import { ReactComponent as SvgDecoratorBlob3 } from "../../images/svg-decorator-blob-3.svg";
 
-import SupportIconImage from "../../images/support-icon.svg";
-import ShieldIconImage from "../../images/shield-icon.svg";
-import CustomizeIconImage from "../../images/customize-icon.svg";
-import FastIconImage from "../../images/fast-icon.svg";
-import ReliableIconImage from "../../images/reliable-icon.svg";
-import SimpleIconImage from "../../images/simple-icon.svg";
-
-const Container = tw.div`relative`;
+const Container = tw.div`relative bg-gray-200`;
 
 const ThreeColumnContainer = styled.div`
-  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
+  ${tw`flex flex-col items-start md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
 `;
-const Heading = tw(SectionHeading)`w-full`;
+const Heading = tw(SectionHeading)`w-full ml-6 text-left text-primary-100`;
 
 const Column = styled.div`
-  ${tw`md:w-1/2 lg:w-1/3 px-6 flex`}
+  ${tw`md:w-1/2 lg:w-1/3 flex`}
 `;
 
 const Card = styled.div`
-  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-primary-500 rounded-lg mt-12`}
+  ${tw`flex flex-col mx-auto max-w-xs px-6 py-10 border-2 bg-white rounded-lg mt-12`}
   .imageContainer {
-    ${tw`border-2 border-primary-500 text-center rounded-full p-6 flex-shrink-0 relative`}
+    ${tw`border-2 border-primary-500 text-center rounded-full p-2 flex-shrink-0 relative`}
     img {
-      ${tw`w-8 h-8`}
+      ${tw`w-20 h-20`}
     }
   }
 
   .textContainer {
-    ${tw`mt-6 text-center`}
+    ${tw`mt-2 text-center`}
   }
 
   .title {
-    ${tw`mt-2 font-bold text-xl leading-none text-primary-500`}
+    ${tw`font-bold text-xl leading-none text-primary-600`}
   }
 
   .description {
@@ -49,9 +44,6 @@ const Card = styled.div`
   }
 `;
 
-const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
-`;
 
 export default () => {
   /*
@@ -64,21 +56,24 @@ export default () => {
 
   const cards = [
     {
-      imageSrc: ShieldIconImage,
-      title: "Ads Management",
-      description: "We create and manage ads that you need, from creation to deployment. Lorem ipsum donor sit amet consicou."
+      imageSrc: CreditIcon,
+      title: "Credit Improvement",
+      description: "Defynance pays off your student loans so your credit score and debt-to-income ratio should improve right away."
     },
-    { imageSrc: SupportIconImage, title: "Video Marketing" },
-    { imageSrc: CustomizeIconImage, title: "Customer Relation" },
-    { imageSrc: ReliableIconImage, title: "Product Outreach" },
-    { imageSrc: FastIconImage, title: "PR Campaign" },
-    { imageSrc: SimpleIconImage, title: "Product Expansion" }
+    { imageSrc: SavingIcon, 
+      title: "Cash-Back",
+      description: "A savings mechanism is built into each ISA that allows you to receive cash back at the end of the ISA term."
+    },
+    { imageSrc: ResoucesIcon,
+      title: "Resources",
+      description: "An ecosystme of career and life resources designed to optimize income so you get the most out of your potential."
+    },
   ];
 
   return (
     <Container>
       <ThreeColumnContainer>
-        <Heading>Our Professional <span tw="text-primary-500">Services</span></Heading>
+        <Heading><p tw="text-black text-base">Live life on your terms</p>Features and Benefits</Heading>
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>
@@ -95,7 +90,7 @@ export default () => {
           </Column>
         ))}
       </ThreeColumnContainer>
-      <DecoratorBlob />
+      <PrimaryButton tw="block mx-auto mb-10">Get an ISA Quote</PrimaryButton>
     </Container>
   );
 };
