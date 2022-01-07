@@ -7,18 +7,12 @@ import Features from "components/features/DashedBorderSixFeatures";
 import MainFeature from "components/features/TwoColSingleFeatureWithStats2.js";
 import MainFeature2 from "components/features/TwoColWithTwoFeaturesAndButtons.js";
 import Portfolio from "components/cards/PortfolioTwoCardsWithImage.js";
-import Blog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
-import Testimonial from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
-import FAQ from "components/faqs/SimpleWithSideImage.js";
 import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
-import Footer from "components/footers/MiniCenteredFooter.js";
-import customerSupportIllustrationSrc from "images/customer-support-illustration.svg";
 import Header, { NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../components/headers/light.js";
 import styled from "styled-components";
-import SimpleContactUs from "components/forms/SimpleContactUs.js";
 import SimpleSubscribeNewsletter from "components/forms/SimpleSubscribeNewsletter.js";
 import FiveColumnDark from "components/footers/FiveColumnDark.js";
-import light from "../components/headers/light.js";
+import { Link } from "react-router-dom";
 
 const StyledHeader = styled(Header)`
   ${tw`py-4 px-40 max-w-none `}
@@ -52,9 +46,9 @@ export default () => (
     <StyledHeader links={navLinks}/>
     <NavLinks tw="p-6 pl-48 mb-8 bg-primary-100 w-full">
       <PrimaryLink tw="bg-primary-600 mr-48 hover:bg-primary-500 hocus:cursor-pointer">Get an ISA Quote</PrimaryLink>
-      <NavLink>Defynance ISA</NavLink>
-      <NavLink>Resources</NavLink>
-      <NavLink>Investors</NavLink>
+      <NavLink><Link tw="no-underline text-white" to="/">Defynance ISA</Link></NavLink>
+      <NavLink><Link tw="no-underline text-white" to="/resources">Resources</Link></NavLink>
+      <NavLink><Link tw="no-underline text-white" to="/investors">Investors</Link></NavLink>
       <NavLink>About Us</NavLink>
     </NavLinks>
     <Hero />

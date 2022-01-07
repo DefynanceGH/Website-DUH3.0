@@ -75,7 +75,7 @@ module.exports = {
         900: '#7b341e',
       },
       yellow: {
-        100: '#fffff0',
+        100: '#FFD234',
         200: '#fefcbf',
         300: '#faf089',
         400: '#f6e05e',
@@ -245,7 +245,7 @@ module.exports = {
       'col-resize': 'col-resize',
     },
     fill: {
-      current: '#fff',
+      current: '#eee',
     },
     flex: {
       '100': '1 1 100%',

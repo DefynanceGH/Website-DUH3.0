@@ -83,7 +83,6 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <h3>Learn More!</h3>
           </TextContent>
         </TextColumn>
         <TextColumn textOnLeft={textOnLeft}>
