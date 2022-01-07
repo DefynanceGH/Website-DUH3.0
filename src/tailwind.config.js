@@ -42,7 +42,7 @@ module.exports = {
 
       gray: {
         "lightest": "#fff",
-        100: '#f7fafc',
+        100: '#DEE5EB',
         200: '#edf2f7',
         300: '#e2e8f0',
         400: '#cbd5e0',

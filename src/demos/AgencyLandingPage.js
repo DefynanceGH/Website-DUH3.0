@@ -15,11 +15,15 @@ import Footer from "components/footers/MiniCenteredFooter.js";
 import customerSupportIllustrationSrc from "images/customer-support-illustration.svg";
 import Header, { NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../components/headers/light.js";
 import styled from "styled-components";
+import SimpleContactUs from "components/forms/SimpleContactUs.js";
+import SimpleSubscribeNewsletter from "components/forms/SimpleSubscribeNewsletter.js";
+import FiveColumnDark from "components/footers/FiveColumnDark.js";
+import light from "../components/headers/light.js";
 
 const StyledHeader = styled(Header)`
-  ${tw`pb-16 max-w-none `}
+  ${tw`py-4 px-40 max-w-none `}
   ${DesktopNavLinks}, ${LogoLink} {
-    ${tw`text-primary-500 hover:border-gray-300 hover:text-gray-300`}
+    ${tw`mx-4 text-primary-500 hover:border-gray-300 hover:text-gray-300`}
   }
   ${PrimaryLink} {
     ${tw`bg-primary-400 hover:bg-primary-500`}
@@ -27,6 +31,12 @@ const StyledHeader = styled(Header)`
   ${NavToggle}.closed {
     ${tw`text-gray-100 hover:text-primary-500`}
   }
+`;
+
+export const NavLink = tw.a`
+  text-lg my-2 lg:text-sm lg:mx-12 lg:my-0 text-white
+  font-semibold tracking-wide transition duration-300
+  pb-1 border-b-2 border-transparent hover:border-white hocus:border-solid hocus:border-t-0 hocus:border-r-0 hocus:border-l-0 cursor-pointer
 `;
 
 const navLinks = [
@@ -40,56 +50,20 @@ const navLinks = [
 export default () => (
   <AnimationRevealPage>
     <StyledHeader links={navLinks}/>
+    <NavLinks tw="p-6 pl-48 mb-8 bg-primary-100 w-full">
+      <PrimaryLink tw="bg-primary-600 mr-48 hover:bg-primary-500 hocus:cursor-pointer">Get an ISA Quote</PrimaryLink>
+      <NavLink>Defynance ISA</NavLink>
+      <NavLink>Resources</NavLink>
+      <NavLink>Investors</NavLink>
+      <NavLink>About Us</NavLink>
+    </NavLinks>
     <Hero />
     <MainFeature />
     <Features />
     <MainFeature2 />
     <Portfolio />
-    <Testimonial
-      subheading="Testimonials"
-      heading={
-        <>
-          Our Clients <span tw="text-primary-500">Love Us.</span>
-        </>
-      }
-      description="Here are what some of our amazing customers are saying about our marketing professionals. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      testimonials={[
-        {
-          imageSrc:
-            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
-          profileImageSrc:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
-          quote:
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-          customerName: "Charlotte Hale",
-          customerTitle: "CEO, Tesla Inc."
-        },
-        {
-          imageSrc:
-            "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&q=80",
-          profileImageSrc:
-            "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
-          quote:
-            "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-          customerName: "Adam Cuppy",
-          customerTitle: "Founder, Nestle"
-        }
-      ]}
-      textOnLeft={true}
-    />
-    <FAQ
-      imageSrc={customerSupportIllustrationSrc}
-      imageContain={true}
-      imageShadow={false}
-      subheading="FAQs"
-      heading={
-        <>
-          Do you have <span tw="text-primary-500">Questions ?</span>
-        </>
-      }
-    />
-    <Blog />
     <ContactUsForm />
-    <Footer />
+    <SimpleSubscribeNewsletter />
+    <FiveColumnDark />
   </AnimationRevealPage>
 );

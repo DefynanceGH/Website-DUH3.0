@@ -5,10 +5,11 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro";
 import { SectionHeading } from "components/misc/Headings.js";
 import defaultCardImage from "../../images/shield-icon.svg";
-import SavingIcon from "../../images/piggy-bank-solid.svg";
-import CreditIcon from "../../images/gauge-solid.svg";
-import ResoucesIcon from "../../images/resource.png";
-
+import CalculatorIcon from "../../images/calculator-solid.svg";
+import LockIcon from "../../images/lock-solid.svg";
+import ClockIcon from "../../images/clock-regular.svg";
+import MoneyIcon from "images/hand-holding-usd-solid.svg"
+import FlagIcon from "images/flag-checkered-solid.svg"
 
 const Container = tw.div`relative`;
 
@@ -22,7 +23,7 @@ const Column = styled.div`
 `;
 
 const Card = styled.div`
-  ${tw`flex px-6 py-10 border-2 border-primary-600 bg-white rounded-lg mt-12`}
+  ${tw`flex px-6 py-8 border-2 border-solid border-primary-600 bg-white rounded-lg mt-12 mx-2`}
   .imageContainer {
     ${tw`border-2 border-primary-500 text-center rounded-full p-2 flex-shrink-0 relative`}
     img {
@@ -55,23 +56,23 @@ export default () => {
 
   const cards = [
     {
-      imageSrc: CreditIcon,
+      imageSrc: CalculatorIcon,
       title: "Affordable Payments",
       description: "Payments are tied to your income so they remain affordable and you always have peace of mind."
     },
-    { imageSrc: SavingIcon, 
+    { imageSrc: LockIcon, 
       title: "Payment Cap",
       description: "There is a limit to how much you will repay. Once the payment cap is reached, your ISA obligation will be fulfilled."
     },
-    { imageSrc: ResoucesIcon,
+    { imageSrc: ClockIcon,
       title: "Deferrals",
       description: "We don’t require a payment when your income falls below the minimum payment threshold."
     },
-    { imageSrc: ResoucesIcon,
+    { imageSrc: MoneyIcon,
       title: "Prepayment",
       description: "You will always be able to make extra payments and reduce your ISA term one month at a time."
     },
-    { imageSrc: ResoucesIcon,
+    { imageSrc: FlagIcon,
       title: "Fixed Term",
       description: "Unlike loans which can have a growing balance, there is a definitive end date to your ISA so you know exactly when your servicing will end."
     },

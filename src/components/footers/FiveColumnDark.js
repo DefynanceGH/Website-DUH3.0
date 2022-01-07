@@ -3,29 +3,28 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
-import LogoImage from "images/logo-light.svg";
+import LogoImage from "images/defynance-logo-alt.svg";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
-import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
+import { ReactComponent as LinkedInIcon } from "images/linkedin-icon.svg";
+import { ReactComponent as InstagramIcon } from "images/instagram-icon.svg";
 
-const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 px-8`;
+const Container = tw.div`relative border-solid border-primary-500 border-t-8 border-b-0 border-l-0 border-r-0 text-gray-500 -mx-8 -mb-8 px-8`;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`
 const FiveColumns = tw.div`flex flex-wrap justify-between`;
 
 const Column = tw.div`w-1/2 md:w-1/5 mb-8 md:mb-0 text-sm sm:text-base text-center md:text-left`;
 const CompanyColumn = tw.div`text-center md:text-left mb-16 lg:mb-0 w-full lg:w-1/5`;
 
-const ColumnHeading = tw.h5`font-bold uppercase`;
+const ColumnHeading = tw.h5`font-bold uppercase text-primary-500`;
 
-const LinkList = tw.ul`mt-4 text-sm font-medium`;
-const LinkListItem = tw.li`mt-3`;
-const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300`;
+const LinkList = tw.ul`pl-0 text-sm font-medium list-none list-outside	`;
+const LinkListItem = tw.li`mt-0`;
+const Link = tw.p`text-primary-500 hocus:text-primary-100 hocus:border-gray-100 pb-1 transition duration-300 cursor-pointer`;
 
 const LogoContainer = tw.div`flex items-center justify-center lg:justify-start`;
-const LogoImg = tw.img`w-8`;
-const LogoText = tw.h5`ml-2 text-xl font-black`;
+const LogoImg = tw.img`w-48`;
 
-const CompanyAddress = tw.p`mt-4 max-w-xs font-medium text-sm mx-auto lg:mx-0 lg:mr-4 leading-loose text-center lg:text-left`;
 
 const SocialLinksContainer = tw.div`mt-4 text-center lg:text-left`;
 const SocialLink = styled.a`
@@ -36,8 +35,7 @@ const SocialLink = styled.a`
 `;
 
 const CopyrightAndCompanyInfoRow = tw.div`pb-0 text-sm font-normal flex flex-col sm:flex-row justify-between items-center`
-const CopyrightNotice = tw.div``
-const CompanyInfo = tw.div``
+const CopyrightNotice = tw.div`mx-auto text-primary-500`
 
 const Divider = tw.div`my-8 border-b-2 border-gray-800`
 export default () => {
@@ -48,98 +46,77 @@ export default () => {
           <CompanyColumn>
             <LogoContainer>
               <LogoImg src={LogoImage} />
-              <LogoText>Treact Inc.</LogoText>
             </LogoContainer>
-            <CompanyAddress>
-              123 Road, New Startup Building
-              Carter Road, San Francisco
-              California 40234
-            </CompanyAddress>
-            <SocialLinksContainer>
-              <SocialLink href="https://facebook.com">
-                <FacebookIcon />
-              </SocialLink>
-              <SocialLink href="https://twitter.com">
-                <TwitterIcon />
-              </SocialLink>
-              <SocialLink href="https://youtube.com">
-                <YoutubeIcon />
-              </SocialLink>
-            </SocialLinksContainer>
           </CompanyColumn>
           <Column>
-            <ColumnHeading>Quick Links</ColumnHeading>
+            <ColumnHeading>Defynance</ColumnHeading>
             <LinkList>
+              <LinkListItem>
+                <Link href="#">Home Page</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Defynance ISA</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Investor</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">About</Link>
+              </LinkListItem>
+            </LinkList>
+          </Column>
+          <Column>
+            <ColumnHeading>Portal</ColumnHeading>
+            <LinkList>
+              <LinkListItem>
+                <Link href="#">My ISA</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Career Resources</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Investing</Link>
+              </LinkListItem>
+            </LinkList>
+          </Column>
+          <Column>
+            <ColumnHeading>Additional Links</ColumnHeading>
+            <LinkList>
+              <LinkListItem>
+                <Link href="#">Contact Information</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Career Center</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">News and PR</Link>
+              </LinkListItem>
               <LinkListItem>
                 <Link href="#">Blog</Link>
               </LinkListItem>
-              <LinkListItem>
-                <Link href="#">FAQs</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Support</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">About Us</Link>
-              </LinkListItem>
             </LinkList>
           </Column>
           <Column>
-            <ColumnHeading>Product</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">Log In</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Personal</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Business</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Team</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnHeading>Legal</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="#">GDPR</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Privacy Policy</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Terms of Service</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Disclaimer</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnHeading>Contact</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                +1 (234) (567)-8901
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="mailto:support@servana.com">support@servana.com</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Sales</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Report Abuse</Link>
-              </LinkListItem>
-            </LinkList>
+          <SocialLinksContainer>
+          <ColumnHeading>Find Us Online</ColumnHeading>
+              <SocialLink href="https://twitter.com">
+                <TwitterIcon />
+              </SocialLink>
+              <SocialLink href="https://linkedin.com">
+                <LinkedInIcon />
+              </SocialLink>
+              <SocialLink href="https://instagram.com">
+                <InstagramIcon />
+              </SocialLink>
+              <SocialLink href="https://facebook.com">
+                <FacebookIcon />
+              </SocialLink>
+            </SocialLinksContainer>
           </Column>
         </FiveColumns>
         <Divider/>
         <CopyrightAndCompanyInfoRow>
-          <CopyrightNotice>&copy; Copyright 2020, Treact Inc.</CopyrightNotice>
-          <CompanyInfo>An Internet Company.</CompanyInfo>
+          <CopyrightNotice>&copy; Copyright 2022.</CopyrightNotice>
         </CopyrightAndCompanyInfoRow>
       </Content>
     </Container>

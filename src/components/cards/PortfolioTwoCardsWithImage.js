@@ -1,129 +1,99 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading } from "components/misc/Headings.js";
-import { PrimaryLink as PrimaryLinkBase } from "components/misc/Links.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg";
-import { ReactComponent as TimeIcon } from "feather-icons/dist/icons/clock.svg";
-import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
+import {css} from "styled-components/macro"; //eslint-disable-line
+import { SectionHeading as HeadingTitle, Subheading } from "components/misc/Headings.js";
 
-const Container = tw.div`relative`;
+const Container = tw.div`relative bg-gray-200`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
+const ThreeColumn = tw.div`flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap mx-32`;
+const Column = tw.div`mt-0 text-center`;
 
-const ThreeColumn = tw.div`flex flex-wrap`;
-const Column = tw.div`xl:mr-12 xl:last:mr-0`;
-const HeadingColumn = styled(Column)(props => [
-  tw`w-full xl:w-5/12`,
-  props.textOnLeft ? tw`xl:order-first` : tw`xl:order-last xl:ml-12 xl:mr-0`
-]);
-const CardColumn = tw(Column)`w-full md:w-1/2 xl:w-3/12 mt-16 xl:mt-0 xl:last:ml-auto`;
+const HeadingInfoContainer = tw.div`flex flex-col items-center`;
 
-const HeadingInfoContainer = tw.div`text-center xl:text-left max-w-lg xl:max-w-none mx-auto xl:mx-0`;
-const HeadingTitle = tw(SectionHeading)`mt-4 xl:text-left leading-tight`;
-const HeadingDescription = tw.p`text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-8`;
-const PrimaryLink = styled(PrimaryLinkBase)`
-  ${tw`inline-flex justify-center xl:justify-start items-center mt-8 text-lg`}
-  svg {
-    ${tw`ml-2 w-5 h-5`}
+
+
+const Card = styled.div`
+  ${tw`flex px-6 py-8 rounded-lg mx-2`}
+  .imageContainer {
+    ${tw`border-2 border-primary-500 text-center rounded-full p-2 flex-shrink-0 relative`}
+    img {
+      ${tw`w-20 h-20`}
+    }
+  }
+
+  .textContainer {
+    ${tw`my-auto mx-16 text-left`}
+  }
+
+  .title {
+    ${tw`font-bold text-xl leading-none text-primary-600`}
+  }
+
+  .title2 {
+    ${tw`font-bold text-xl text-white border-solid border-primary-500 bg-primary-500 p-6 rounded-full`}
+  }
+
+  .description {
+    ${tw`mt-3 font-semibold text-secondary-100 text-sm leading-loose`}
   }
 `;
 
-const Card = tw.div`mx-auto xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs`;
-const CardImage = styled.div(props => [
-  `background-image: url("${props.imageSrc}");`,
-  tw`h-80 bg-cover bg-center rounded`
-]);
-
-const CardText = tw.div`mt-4`;
-
-const CardHeader = tw.div`flex justify-between items-center`;
-const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
-const CardType = tw.div`font-semibold text-sm text-gray-600`;
-
-const CardTitle = tw.h5`text-xl mt-4 font-bold`;
-
-const CardMeta = styled.div`
-  ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
-`;
-
-const CardMetaFeature = styled.div`
-  ${tw`flex items-center mt-4 mr-4 last:mr-0`}
-  svg {
-    ${tw`w-5 h-5 mr-1`}
-  }
-`;
-const CardAction = tw(PrimaryButtonBase)`w-full mt-6`;
 
 export default ({
-  subheading = "Our Portfolio",
-  headingHtmlComponent = (
-    <>
-      We've done some <span tw="text-primary-500">amazing projects.</span>
-    </>
-  ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.",
-  linkText = "View all Projects",
-  cardLinkText = "Read Case Study",
-  textOnLeft = false
+  subheading = "How it Works",
+  heading = <>Getting a Defynance ISA</>,
+
 }) => {
-  const cards = [
+  const blogPosts = [
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1563461660947-507ef49e9c47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      company: "Tesla Inc.",
-      type: "Ad Campaign",
-      title: "Personalized Ad Campaign using Google AdWords",
-      durationText: "90 Days Campaign",
-      locationText: "New York"
+      title: "Request a FREE Quote",
+      description: "Provide some information about your current situation and we will use our propriatary alogrithm to find some ISA options that work for you.",
+      url: "https://reddit.com"
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1573165231977-3f0e27806045?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      company: "Nestle",
-      type: "SEO Marketing",
-      title: "Ranking #1 for keywords like Chocolate, Snack",
-      durationText: "180 Day Campaign",
-      locationText: "Palo Alto"
+      title: "Apply for a Defynance ISA",
+      description: "Once you have chosen the best quote option, fill out an online application and provide verification documents.",
+      url: "https://timerse.com"
+    },
+    {
+      title: "Get Approved",
+      description: "Our underwriting and risk team will review your application and ensure all qualifications have been met. ",
+      url: "https://timerse.com"
+    },
+    {
+      title: "Student Loans are Paid Off",
+      description: "With your approval, we will pay off your student loans. You no longer have to worry about interest or loss of income.",
+      url: "https://timerse.com"
+    },
+    {
+      title: "Affordable ISA Payments",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      url: "https://timerse.com"
     }
   ];
   return (
     <Container>
       <Content>
+        <HeadingInfoContainer>
+          {subheading && <Subheading>{subheading}</Subheading>}
+          <HeadingTitle tw="text-primary-100 my-0">{heading}</HeadingTitle>
+        </HeadingInfoContainer>
         <ThreeColumn>
-          <HeadingColumn textOnLeft={textOnLeft}>
-            <HeadingInfoContainer>
-              <Subheading>{subheading}</Subheading>
-              <HeadingTitle>{headingHtmlComponent}</HeadingTitle>
-              <HeadingDescription>{description}</HeadingDescription>
-              <PrimaryLink>
-                {linkText} <ArrowRightIcon />
-              </PrimaryLink>
-            </HeadingInfoContainer>
-          </HeadingColumn>
-          {cards.map((card, index) => (
-            <CardColumn key={index}>
-              <Card>
-                <CardImage imageSrc={card.imageSrc} />
-                <CardText>
-                  <CardHeader>
-                    <CardCompany>{card.company}</CardCompany>
-                    <CardType>{card.type}</CardType>
-                  </CardHeader>
-                  <CardTitle>{card.title}</CardTitle>
-                  <CardMeta>
-                    <CardMetaFeature>
-                      <TimeIcon /> {card.durationText}
-                    </CardMetaFeature>
-                    <CardMetaFeature>
-                      <LocationIcon /> {card.locationText}
-                    </CardMetaFeature>
-                  </CardMeta>
-                  <CardAction>{cardLinkText}</CardAction>
-                </CardText>
-              </Card>
-            </CardColumn>
+          {blogPosts.map((card, index) => (
+            <Column key={index}>
+            <Card >
+              <span className="imageContainer">
+                <h1 className="title2 ml-24">{index + 1}</h1>
+              </span>
+              <span className="textContainer">
+                <span className="title">{card.title || "Fully Secure"}</span>
+                <p className="description">
+                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud. Sic Semper Tyrannis. Neoas Calie artel."}
+                </p>
+              </span>
+            </Card>
+          </Column>
           ))}
         </ThreeColumn>
       </Content>
