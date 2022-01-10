@@ -19,8 +19,8 @@ const CompanyColumn = tw.div`text-center md:text-left mb-16 lg:mb-0 w-full lg:w-
 const ColumnHeading = tw.h5`font-bold uppercase text-primary-500`;
 
 const LinkList = tw.ul`pl-0 text-sm font-medium list-none list-outside	`;
-const LinkListItem = tw.li`mt-0`;
-const Link = tw.p`text-primary-500 hocus:text-primary-100 hocus:border-gray-100 pb-1 transition duration-300 cursor-pointer`;
+const LinkListItem = tw.li`py-2 mt-0`;
+const Link = tw.a`no-underline text-primary-500 hocus:text-primary-100 hocus:border-gray-100 pb-1 transition duration-300 cursor-pointer`;
 
 const LogoContainer = tw.div`flex items-center justify-center lg:justify-start`;
 const LogoImg = tw.img`w-48`;
@@ -52,16 +52,16 @@ export default () => {
             <ColumnHeading>Defynance</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Home Page</Link>
+                <Link href="/">Home Page</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Defynance ISA</Link>
+                <Link href="/">Defynance ISA</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Investor</Link>
+                <Link href="/investors">Investor</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">About</Link>
+                <Link href="/about">About</Link>
               </LinkListItem>
             </LinkList>
           </Column>
@@ -69,10 +69,10 @@ export default () => {
             <ColumnHeading>Portal</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">My ISA</Link>
+                <Link target="_blank" href="http://portal.defynance.com/">My ISA</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Career Resources</Link>
+                <Link target="_blank" href="http://portal.defynance.com/resources">Career Resources</Link>
               </LinkListItem>
               <LinkListItem>
                 <Link href="#">Investing</Link>
@@ -92,23 +92,23 @@ export default () => {
                 <Link href="#">News and PR</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Blog</Link>
+                <Link target="_blank" href="https://defynance.com/blog/">Blog</Link>
               </LinkListItem>
             </LinkList>
           </Column>
           <Column>
           <SocialLinksContainer>
           <ColumnHeading>Find Us Online</ColumnHeading>
-              <SocialLink href="https://twitter.com">
+              <SocialLink target="_blank" href="https://twitter.com/defynance">
                 <TwitterIcon />
               </SocialLink>
-              <SocialLink href="https://linkedin.com">
+              <SocialLink target="_blank" href="https://www.linkedin.com/company/defynance">
                 <LinkedInIcon />
               </SocialLink>
-              <SocialLink href="https://instagram.com">
+              <SocialLink target="_blank" href="https://www.instagram.com/defynance/">
                 <InstagramIcon />
               </SocialLink>
-              <SocialLink href="https://facebook.com">
+              <SocialLink target="_blank" href="https://www.facebook.com/Defynance">
                 <FacebookIcon />
               </SocialLink>
             </SocialLinksContainer>

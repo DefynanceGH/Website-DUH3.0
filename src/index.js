@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Investors from "demos/EventLandingPage";
 import Resources from "demos/HostingCloudLandingPage";
 import About from "demos/HotelTravelLandingPage"
+import FAQ from "demos/RestaurantLandingPage"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route path="investors" element={<Investors />} />
         <Route path="resources" element={<Resources />} />
         <Route path="about" element={<About />} />
+        <Route path="faqs" element={<FAQ />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

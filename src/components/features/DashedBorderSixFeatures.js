@@ -8,8 +8,7 @@ import defaultCardImage from "../../images/shield-icon.svg";
 import SavingIcon from "../../images/piggy-bank-solid.svg";
 import CreditIcon from "../../images/gauge-solid.svg";
 import ResoucesIcon from "../../images/resource.png";
-import { PrimaryButton } from "components/misc/Buttons";
-
+import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
 const Container = tw.div`relative bg-gray-200`;
 
@@ -44,6 +43,10 @@ const Card = styled.div`
   }
 `;
 
+const PrimaryAction = styled(PrimaryButtonBase).attrs({as: "a"})`
+  ${tw` text-white no-underline rounded bg-primary-500 mx-auto inline-block mb-10 text-sm font-semibold hocus:bg-white hocus:text-primary-600 focus:shadow-outline
+  `}
+`
 
 export default () => {
   /*
@@ -90,7 +93,9 @@ export default () => {
           </Column>
         ))}
       </ThreeColumnContainer>
-      <PrimaryButton tw="block mx-auto mb-10">Get an ISA Quote</PrimaryButton>
+      <div tw="flex">
+        <PrimaryAction target="_blank" href="http://portal.defynance.com/" >Get an ISA Quote</PrimaryAction>
+      </div>
     </Container>
   );
 };

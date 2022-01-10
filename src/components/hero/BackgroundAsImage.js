@@ -2,24 +2,11 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-
-import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
+import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
-const StyledHeader = styled(Header)`
-  ${tw`pt-8 max-w-none`}
-  ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300`}
-  }
-  ${PrimaryLink} {
-    ${tw`bg-primary-400 hover:bg-primary-500`}
-  }
-  ${NavToggle}.closed {
-    ${tw`text-gray-100 hover:text-primary-500`}
-  }
-`;
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover`}
+  ${tw`relative sm:mx-8 lg:mx-0 -mt-8 bg-center bg-cover`}
   background-image: url("https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
 `;
 
@@ -47,12 +34,10 @@ const SlantedBackground = styled.span`
 
 const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-sm`;
 
-const PrimaryAction = tw(NavLinks)`
-lg:mx-2
-px-8 py-3 rounded text-gray-100 bg-primary-100
-hocus:bg-primary-200 hocus:text-gray-200 focus:shadow-outline
-border-b-0 cursor-pointer
-`;
+const PrimaryAction = styled(PrimaryButtonBase).attrs({as: "a"})`
+  ${tw`text-center text-white no-underline rounded bg-primary-500 mx-2 inline-block mb-10 text-sm font-semibold hocus:bg-white hocus:text-primary-600 focus:shadow-outline
+  `}
+`
 
 const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
   padding-bottom: 56.25% !important;
@@ -64,27 +49,6 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 `;
 
 export default () => {
-  const navLinks = [
-    <NavLinks key={2}>
-      <PrimaryLink href="/#">
-        Get an ISA Quote
-      </PrimaryLink>
-    </NavLinks>,
-    <NavLinks key={1}>
-      <NavLink href="#">
-        Defynance ISA
-      </NavLink>
-      <NavLink href="#">
-        Resources
-      </NavLink>
-      <NavLink href="#">
-        Investors
-      </NavLink>
-      <NavLink href="#">
-        About Us
-      </NavLink>
-    </NavLinks>
-  ];
 
   return (
     <Container>
@@ -101,12 +65,14 @@ export default () => {
             </Heading>
             <Notification>A NEW innovative solution to refinancing student loans</Notification>
             <br />
-            <PrimaryAction>Get an ISA Quote</PrimaryAction>
-            <PrimaryAction>How will an ISA help me</PrimaryAction>
+            <div tw="flex justify-between">
+              <PrimaryAction tw="hocus:bg-white hocus:text-primary-500" target="_blank" href="http://portal.defynance.com/">Get an ISA Quote</PrimaryAction>
+              <PrimaryAction tw="hocus:bg-white hocus:text-primary-500" href="#consumerprotections">How will an ISA help me</PrimaryAction>
+            </div>
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed
-              url="//player.vimeo.com/video/374265101?title=0&portrait=0&byline=0&autoplay=0&responsive=1"
+              url="https://www.youtube.com/embed/fluviCuspdI"
               background="transparent"
             />
           </RightColumn>

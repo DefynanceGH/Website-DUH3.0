@@ -9,9 +9,9 @@ import Supporters from "components/features/aboutussupporters";
 import MiddleSection from "components/features/aboutusmiddle"
 import Header, { NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../components/headers/light.js";
 import styled from "styled-components";
-import SimpleSubscribeNewsletter from "components/forms/SimpleSubscribeNewsletter.js";
 import FiveColumnDark from "components/footers/FiveColumnDark.js";
 import { Link } from "react-router-dom";
+import ThreeColSimpleWithImageAndDashedBorder from "components/blogs/ThreeColSimpleWithImageAndDashedBorder";
 
 const StyledHeader = styled(Header)`
   ${tw`py-4 px-40 max-w-none `}
@@ -44,7 +44,7 @@ export default () => (
   <AnimationRevealPage>
     <StyledHeader links={navLinks}/>
     <NavLinks tw="p-6 pl-48 mb-8 bg-primary-100 w-full">
-      <PrimaryLink tw="bg-primary-600 mr-48 hover:bg-primary-500 hocus:cursor-pointer">Get an ISA Quote</PrimaryLink>
+      <PrimaryLink tw="bg-primary-600 mr-48 hover:bg-primary-500 hocus:cursor-pointer no-underline" target="_blank" href="http://portal.defynance.com/">Get an ISA Quote</PrimaryLink>
       <NavLink><Link tw="no-underline text-white" to="/">Defynance ISA</Link></NavLink>
       <NavLink><Link tw="no-underline text-white" to="/resources">Resources</Link></NavLink>
       <NavLink><Link tw="no-underline text-white" to="/investors">Investors</Link></NavLink>
@@ -55,6 +55,7 @@ export default () => (
     <Supporters />
     <MeetTeam />
     <MiddleSection />
+    <ThreeColSimpleWithImageAndDashedBorder />
     <FiveColumnDark />
   </AnimationRevealPage>
 );

@@ -4,19 +4,14 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import { SectionDescription } from "components/misc/Typography.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as ChevronDownIcon } from "feather-icons/dist/icons/chevron-down.svg";
-import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-7.svg";
-import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-8.svg";
+import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
-const Subheading = tw(SubheadingBase)`mb-4 text-center`;
-const Heading = tw(SectionHeading)`w-full`;
-const Description = tw(SectionDescription)`w-full text-center`;
-
+const Subheading = tw(SubheadingBase)`text-center`;
+const Heading = tw(SectionHeading)`w-full text-primary-100`;
 const Column = tw.div`flex flex-col items-center`;
 const HeaderContent = tw.div``;
-
 const FAQSContainer = tw.dl`mt-12 max-w-4xl relative`;
 const FAQ = tw.div`cursor-pointer select-none mt-5 px-8 sm:px-10 py-5 sm:py-4 rounded-lg text-gray-800 hover:text-gray-900 bg-gray-200 hover:bg-gray-300 transition duration-300`;
 const Question = tw.dt`flex justify-between items-center`;
@@ -29,24 +24,19 @@ const QuestionToggleIcon = motion(styled.span`
 `);
 const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed`);
 
-const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
-  ${tw`pointer-events-none -z-20 absolute right-0 top-0 h-56 w-56 opacity-15 transform translate-x-2/3 -translate-y-12 text-teal-400`}
-`;
-const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
-  ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-64 w-64 opacity-15 transform -translate-x-2/3 text-primary-500`}
-`;
-
-
+const PrimaryAction = styled(PrimaryButtonBase).attrs({as: "a"})`
+  ${tw`px-4 py-2 text-white no-underline rounded bg-primary-500 mx-auto border-solid border-primary-500 inline-block mb-10 text-sm font-semibold hocus:bg-gray-200 hocus:text-primary-600 focus:shadow-outline
+  `}
+`
 
 export default ({
-  subheading = "FAQS",
-  heading = "You have Questions ?",
-  description = "And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  subheading = "Learn more",
+  heading = "Frequently Asked Questions",
   faqs = [
     {
-      question: "Is lunch provided free of cost ?",
+      question: "Tax deferral",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        "Answer to question 1 expanded here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna etiam tempor orci eu lobortis elementum nibh tellus. Aenean euismod elementum nisi quis eleifend."
     },
     {
       question: "Do you have 2 Bedroom suites ?",
@@ -79,7 +69,6 @@ export default ({
           <HeaderContent>
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
-            {description && <Description>{description}</Description>}
           </HeaderContent>
           <FAQSContainer>
             {faqs.map((faq, index) => (
@@ -120,8 +109,8 @@ export default ({
           </FAQSContainer>
         </Column>
       </ContentWithPaddingXl>
-      <DecoratorBlob1/>
-      <DecoratorBlob2 />
+      <Subheading tw="text-lg">Still have questions? Let's talk.</Subheading>
+      <div tw="flex"><PrimaryAction target="_blank" href="https://defynance.com/blog/">Schedule a meeting</PrimaryAction></div>
     </Container>
   );
 };

@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { NavLinks } from "../headers/light.js";
+import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 `;
@@ -20,19 +22,10 @@ const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(SectionHeading)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`
 
-const PrimaryAction = tw(NavLinks)`
-lg:mx-2
-px-8 py-3 rounded text-gray-100 bg-primary-500
-hocus:bg-primary-600 hocus:text-gray-200 focus:shadow-outline
-border-b-0 cursor-pointer
-`;
-
-const SecondaryAction = tw(NavLinks)`
-lg:mx-2
-px-8 py-3 rounded text-primary-500 font-bold bg-gray-200
-hocus:bg-primary-600 hocus:text-gray-200
-border-b-0 cursor-pointer
-`;
+const PrimaryAction = styled(PrimaryButtonBase).attrs({as: "a"})`
+  ${tw` text-white no-underline rounded bg-primary-500 mx-auto inline-block mb-10 text-sm font-semibold hocus:bg-white hocus:text-primary-600 focus:shadow-outline
+  `}
+`
 
 export default ({
   subheading = "Contact Us",
@@ -46,8 +39,8 @@ export default ({
     <Container>
       <TwoColumn>
         <TextColumn tw="m-auto block">
-            <PrimaryAction tw="w-96 my-6 text-center">View FAQ</PrimaryAction>
-            <SecondaryAction tw="w-96 text-center">Contact Us</SecondaryAction>
+            <PrimaryAction href="/faqs"tw="w-96 my-6 text-center">View FAQ</PrimaryAction>
+            <PrimaryAction href="/contact"tw="w-96 my-6 text-center" tw="w-96 text-center">Contact Us</PrimaryAction>
         </TextColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>

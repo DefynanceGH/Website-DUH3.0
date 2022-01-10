@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { ReactComponent as BulletIcon} from 'images/checkbox-circle.svg'
+import { ReactComponent as Butterfly} from 'images/Butterfly.svg'
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -50,30 +51,9 @@ export default ({
       </div>
     </>
   ),
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
   imageInsideDiv = true,
-  statistics = null,
   textOnLeft = false
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
-  //Change the statistics variable as you like, add or delete objects
-  const defaultStatistics = [
-    {
-      key: "Clients",
-      value: "2282+"
-    },
-    {
-      key: "Projects",
-      value: "3891+"
-    },
-    {
-      key: "Awards",
-      value: "1000+"
-    }
-  ];
-
-  if (!statistics) statistics = defaultStatistics;
 
   return (
     <Container>
@@ -85,9 +65,9 @@ export default ({
             <Description>{description}</Description>
           </TextContent>
         </TextColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            <h2 tw="mt-32" >How it works</h2>
+        <TextColumn tw="border-solid rounded p-10" textOnLeft={textOnLeft}>
+          <TextContent tw="my-auto">
+            <Subheading tw="text-lg">How it works</Subheading>
             <p tw="text-lg">Defynance will pay off your current student loans. In exchange, you will agree to provide a fixed percentage of your fuiture income over a defined number of payments of your choice.</p>
             <p tw="text-lg">Congratulations! You are now free of student loan debt. At the end of the Defynance ISA, you will receive a cash-back reward to enjoy your financial freedom.</p>
           </TextContent>

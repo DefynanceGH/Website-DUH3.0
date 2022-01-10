@@ -19,14 +19,9 @@ const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 const Subheading = tw(SubheadingBase)`text-white text-center md:text-left`;
 const Heading = tw(SectionHeading)`my-0 pt-12 w-full text-center text-white`;
 
-const Description = tw.p`text-white mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed`
+const Description = tw.a`no-underline text-white mt-4 text-center hocus:text-yellow-100 hocus:cursor-pointer md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed`
 
-export default ({
-  subheading = "Make a positive impact",
-  heading = <>Become a Partner</>,
-  description = <></>,
-  textOnLeft = true,
-}) => {
+export default () => {
 
 
   return (
@@ -35,28 +30,28 @@ export default ({
       <TwoColumn>
         <TextColumn >
             <TextContent>
-                <Description>“Defynance: Tampa startup takes on student loan crisis”</Description>
+                <Description target="_blank" href="https://www.83degreesmedia.com/innovationnews/startup-takes-on-student-loan-crisis-030519.aspx">“Defynance: Tampa startup takes on student loan crisis”</Description>
                 <Subheading>83 Degrees Media</Subheading>
             </TextContent>
         </TextColumn>
         <TextColumn>
             <TextContent  tw="text-right">
-                <Description>“RedPerit’s Defynance is out to disrupt the student loan market”</Description>
-                <Subheading>St. Pete Catalyst</Subheading>
+                <Description target="_blank" href="https://stpetecatalyst.com/redperits-defynance-is-out-to-disrupt-the-student-loan-market/">“RedPerit’s Defynance is out to disrupt the student loan market”</Description>
+                <Subheading tw="text-right">St. Pete Catalyst</Subheading>
             </TextContent>
         </TextColumn>
       </TwoColumn>
       <TwoColumn>
         <TextColumn >
             <TextContent>
-                <Description>“Featured Founder: Farrukh Siddiqui of Defynance”</Description>
+                <Description target="_blank" href="https://www.embarccollective.com/featured-founder-farrukh-siddiqui-of-defynance/">“Featured Founder: Farrukh Siddiqui of Defynance”</Description>
                 <Subheading>Embarc Collective</Subheading>
             </TextContent>
         </TextColumn>
         <TextColumn>
             <TextContent  tw="text-right">
-                <Description>“The Snowball Effect of Student Debt”</Description>
-                <Subheading>Morgan Stanley</Subheading>
+                <Description target="_blank" href="https://www.morganstanley.com/ideas/carla-harris-student-debt-access-and-opportunity-podcast">“The Snowball Effect of Student Debt”</Description>
+                <Subheading tw="text-right">Morgan Stanley</Subheading>
             </TextContent>
         </TextColumn>
       </TwoColumn>

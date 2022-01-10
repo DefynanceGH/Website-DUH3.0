@@ -38,10 +38,10 @@ const Heading = styled.h1`
 
 const Notification = tw.span`inline-block w-64 my-4 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-base`;
 
-const PrimaryAction = tw(NavLinks)`
+const PrimaryAction = tw(NavLink)`
 px-4 py-2 rounded text-primary-500 bg-white
 hocus:bg-gray-100 hocus:text-primary-600 focus:shadow-outline
-border-b-0 cursor-pointer
+border-b-0 cursor-pointer no-underline mx-0
 `;
 
 export default () => {
@@ -58,7 +58,7 @@ export default () => {
             <Notification >Find career resources to learn new skills or even start your own business.</Notification>
             <br />
             <br />
-            <PrimaryAction>Create an Account</PrimaryAction>
+            <PrimaryAction target="_blank" href="http://portal.defynance.com/signup">Create an Account</PrimaryAction>
           </LeftColumn>
         </TwoColumn>
       </HeroContainer>

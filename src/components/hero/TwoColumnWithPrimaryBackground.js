@@ -24,7 +24,7 @@ export default ({
   description = <><span>Let’s #DefyDebt together.</span><br /><br />
   Defynance is a impact fintech with a vision to integrate social responsibility within financial services</>,
   primaryButtonText = "Get an ISA Quote",
-  primaryButtonUrl = "#",
+  primaryButtonUrl = "http://portal.defynance.com/",
   imageSrc = defynanceLogo,
 }) => {
   return (
@@ -36,7 +36,7 @@ export default ({
               <TextColumn>
                 <Heading>{heading}</Heading>
                 <Description>{description}</Description>
-                <PrimaryButton as="a" href={primaryButtonUrl}>{primaryButtonText}</PrimaryButton>
+                <PrimaryButton target="_blank" as="a" href={primaryButtonUrl}>{primaryButtonText}</PrimaryButton>
               </TextColumn>
               <IllustrationColumn>
                 <Image src={imageSrc} />

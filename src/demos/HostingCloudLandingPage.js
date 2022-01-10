@@ -45,7 +45,7 @@ export default () => (
   <AnimationRevealPage>
     <StyledHeader links={navLinks}/>
     <NavLinks tw="p-6 pl-48 mb-8 bg-primary-100 w-full">
-      <PrimaryLink tw="bg-primary-600 mr-48 hover:bg-primary-500 hocus:cursor-pointer">Get an ISA Quote</PrimaryLink>
+      <PrimaryLink tw="bg-primary-600 mr-48 hover:bg-primary-500 hocus:cursor-pointer no-underline" target="_blank" href="http://portal.defynance.com/">Get an ISA Quote</PrimaryLink>
       <NavLink><Link tw="no-underline text-white" to="/">Defynance ISA</Link></NavLink>
       <NavLink><Link tw="no-underline text-white" to="/resources">Resources</Link></NavLink>
       <NavLink><Link tw="no-underline text-white" to="/investors">Investors</Link></NavLink>
