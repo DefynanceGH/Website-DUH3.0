@@ -5,12 +5,9 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/ResourcesBanner";
 import Hero2 from "components/hero/resourceslastbanne.js";
 import Features from "components/features/resourcesfeautures";
-import MainFeature2 from "components/features/TwoColWithTwoFeaturesAndButtons.js";
-import Portfolio from "components/cards/PortfolioTwoCardsWithImage.js";
 import MiddleSection from "components/features/middlesection.js";
 import Header, { NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../components/headers/light.js";
 import styled from "styled-components";
-import SimpleSubscribeNewsletter from "components/forms/SimpleSubscribeNewsletter.js";
 import FiveColumnDark from "components/footers/FiveColumnDark.js";
 import { Link } from "react-router-dom";
 
@@ -35,7 +32,7 @@ export const NavLink = tw.a`
 
 const navLinks = [
   <NavLinks key={1}>
-    <PrimaryLink href="/#">
+    <PrimaryLink target="_blank" href="http://portal.defynance.com/">
       Sign in
     </PrimaryLink>
   </NavLinks>

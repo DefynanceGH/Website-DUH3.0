@@ -75,6 +75,18 @@ export default () => {
       twitter: "https://twitter.com/ttellner",
       linkedin: "https://www.linkedin.com/in/thomastellner/"
     },
+    { imageSrc: "https://media-exp1.licdn.com/dms/image/C5603AQFtahSEuyx0Zg/profile-displayphoto-shrink_400_400/0/1602019502105?e=1647475200&v=beta&t=lSCjGzoGCNOv4pq5hXUTK5Hk2mdDKCKkSea3Cen5OeY",
+    title: "Aakash Sheth",
+    description: "Sr. Manager, ML Ops",
+    twitter: "https://twitter.com/aakashsheth65",
+    linkedin: "https://www.linkedin.com/in/aakash-sheth/"
+    },
+    { imageSrc: "https://media-exp1.licdn.com/dms/image/C4E03AQEBOPln6Histw/profile-displayphoto-shrink_400_400/0/1617045038316?e=1647475200&v=beta&t=AzXP0RW0EEuR-hpdHs-7NNifkQAZBv8bNX4BCnjnoXM",
+      title: "Camilo Morales",
+      description: "Full Stack Engineer",
+      twitter: "https://twitter.com/CamiloAndres_15",
+      linkedin: "https://www.linkedin.com/in/camilo-andres-morales/"
+    },
     { imageSrc: "https://media-exp1.licdn.com/dms/image/C4E03AQE4QZLwLSk0Pw/profile-displayphoto-shrink_400_400/0/1623883321963?e=1647475200&v=beta&t=KjlDndC13pPKZr7RS_EEcywt3HUwUnkbcZeYvCB6SUM",
       title: "Grace Beroes",
       description: "Customer Success Lead",
@@ -94,22 +106,10 @@ export default () => {
       linkedin: "https://www.linkedin.com/in/monicakhourie/"
     },
     { imageSrc: "https://media-exp1.licdn.com/dms/image/C5603AQHkSTNtsCImbA/profile-displayphoto-shrink_400_400/0/1622400733584?e=1647475200&v=beta&t=K4z6SIF_9rALYbkdWhEiw8Khm9wqqQTavEKYPEh69ro",
-      title: "Sad Raza",
+      title: "Saad Raza",
       description: "Analyst, Accounting",
       twitter: "#",
       linkedin: "https://www.linkedin.com/in/saad-raza-99bb7939/"
-    },
-    { imageSrc: "https://media-exp1.licdn.com/dms/image/C5603AQFtahSEuyx0Zg/profile-displayphoto-shrink_400_400/0/1602019502105?e=1647475200&v=beta&t=lSCjGzoGCNOv4pq5hXUTK5Hk2mdDKCKkSea3Cen5OeY",
-      title: "Aakash Sheth",
-      description: "Sr. Manager, ML Ops",
-      twitter: "https://twitter.com/aakashsheth65",
-      linkedin: "https://www.linkedin.com/in/aakash-sheth/"
-    },
-    { imageSrc: "https://media-exp1.licdn.com/dms/image/C4E03AQEBOPln6Histw/profile-displayphoto-shrink_400_400/0/1617045038316?e=1647475200&v=beta&t=AzXP0RW0EEuR-hpdHs-7NNifkQAZBv8bNX4BCnjnoXM",
-      title: "Camilo Morales",
-      description: "Full Stack Engineer",
-      twitter: "https://twitter.com/CamiloAndres_15",
-      linkedin: "https://www.linkedin.com/in/camilo-andres-morales/"
     },
     { imageSrc: "https://media-exp1.licdn.com/dms/image/C5603AQG5Hv2iK1LdJQ/profile-displayphoto-shrink_400_400/0/1593470009647?e=1647475200&v=beta&t=cvqRW1cPnF-p9wee6vz_huaUi_RMjxUlb3LnLijC-ZY",
       title: "Tommy Ngo",
@@ -120,13 +120,6 @@ export default () => {
   ];
 
   const advisors = [
-    {
-      imageSrc: "https://media-exp1.licdn.com/dms/image/C4D03AQGRhSNc48AeWQ/profile-displayphoto-shrink_400_400/0/1594036938321?e=1647475200&v=beta&t=xOxebf8iT2c_mZSRUesPRSVbka7JohYAzMkb3B5XEH0",
-      title: "Andres Barreto",
-      description: "Techstars",
-      twitter: "https://twitter.com/andresbarreto",
-      linkedin: "https://www.linkedin.com/in/andreshb/"
-    },
     { 
       imageSrc: "https://media-exp1.licdn.com/dms/image/C4E03AQH5-w7K1JUsrQ/profile-displayphoto-shrink_400_400/0/1575578047768?e=1647475200&v=beta&t=2-ajmiv7KopgU_fiqz4VdY-nclbUi5qTYoULJZjnhbA",
       title: "Alison Beckner",
@@ -134,26 +127,12 @@ export default () => {
       twitter: "https://twitter.com/ali_beckner",
       linkedin: "https://www.linkedin.com/in/alisoncbeckner/"
     },
-    { 
-      imageSrc: "https://media-exp1.licdn.com/dms/image/C4E03AQES_pyHrNMKGg/profile-displayphoto-shrink_400_400/0/1517715249061?e=1647475200&v=beta&t=P7jfgqLQ1gNuGW_A8HPBryioeDh9vYef5ZvKL4px4qw",
-      title: "Vivek Boray",
-      description: "Locus.sh",
-      twitter: "https://twitter.com/BorayVivek",
-      linkedin: "https://www.linkedin.com/in/viveknboray/"
-    },
-    { 
-      imageSrc: "https://media-exp1.licdn.com/dms/image/C4D03AQE6BUfv087Efw/profile-displayphoto-shrink_400_400/0/1621637474190?e=1647475200&v=beta&t=1gcOARFoBJm9W83Sq8Wyfebz1lJV0t11Zu-0XRz85vc",
-      title: "Sasha Charlamagne",
-      description: "Ignite",
-      twitter: "#",
-      linkedin: "https://www.linkedin.com/in/sashacharlemagne/"
-    },
-    { 
-      imageSrc: "https://media-exp1.licdn.com/dms/image/C4E03AQFU0P0_FdOldw/profile-displayphoto-shrink_400_400/0/1583766535488?e=1647475200&v=beta&t=PYVxmN_Gm7A_LarzfWRFgGlj1KB0IHA1jPqrkcTdxrs",
-      title: "Stephanie Foster",
-      description: "XY Planning Network",
-      twitter: "#",
-      linkedin: "https://www.linkedin.com/in/stephaniefoster2/"
+    {
+      imageSrc: "https://media-exp1.licdn.com/dms/image/C4D03AQGRhSNc48AeWQ/profile-displayphoto-shrink_400_400/0/1594036938321?e=1647475200&v=beta&t=xOxebf8iT2c_mZSRUesPRSVbka7JohYAzMkb3B5XEH0",
+      title: "Andres Barreto",
+      description: "Techstars",
+      twitter: "https://twitter.com/andresbarreto",
+      linkedin: "https://www.linkedin.com/in/andreshb/"
     },
     { 
       imageSrc: "https://media-exp1.licdn.com/dms/image/C5603AQHwAhn_k4FeBg/profile-displayphoto-shrink_400_400/0/1628706744368?e=1647475200&v=beta&t=W3D4OaDjojjjJ9WtSuckTyqb_FimdiIi-6NXXgypFys",
@@ -163,40 +142,19 @@ export default () => {
       linkedin: "https://www.linkedin.com/in/suddath/"
     },
     { 
-      imageSrc: "https://media-exp1.licdn.com/dms/image/C4D03AQGF3JvJt5i9Rw/profile-displayphoto-shrink_400_400/0/1516495666981?e=1647475200&v=beta&t=88IOnf_t5yn98i91fTko8rVJUAG-BiIAf327m94MH_k",
-      title: "Sara Zervos",
-      description: "The Pao App",
-      twitter: "#",
-      linkedin: "https://www.linkedin.com/in/sarajzervos/"
-    },
-    { 
-      imageSrc: "https://media-exp1.licdn.com/dms/image/C4D03AQE6BUfv087Efw/profile-displayphoto-shrink_400_400/0/1621637474190?e=1647475200&v=beta&t=1gcOARFoBJm9W83Sq8Wyfebz1lJV0t11Zu-0XRz85vc",
-      title: "Sasha Charlamagne",
-      description: "Locus.sh",
-      twitter: "#",
-      linkedin: "https://www.linkedin.com/in/sashacharlemagne/"
-    },
-    { 
-      imageSrc: "https://media-exp1.licdn.com/dms/image/C4E03AQHwxwBJAjrjDw/profile-displayphoto-shrink_400_400/0/1516185855867?e=1647475200&v=beta&t=f3TSMfcMPNS-9Wd67ivudPbNyzGRrdaaMyhAywXz6Zg",
-      title: "Kevin Phillips",
-      description: "RoadSync",
-      twitter: "#",
-      linkedin: "https://www.linkedin.com/in/kevin-phillips-157b6/"
-    },
-    { 
-      imageSrc: null,
-      title: "Jonathan Siskin",
-      description: "Deluxe Corporation",
-      twitter: "#",
-      linkedin: "https://www.linkedin.com/in/jonathan-siskin/"
-    },
-    { 
       imageSrc: "https://media-exp1.licdn.com/dms/image/C5603AQEQG3dl5JEOng/profile-displayphoto-shrink_400_400/0/1516308276676?e=1647475200&v=beta&t=-tuzf26eQm8hOK9Am3zFJkWoKMke6oGPSaDWum-qNc4",
       title: "Richard Carrano",
       description: "Purchasing Power",
       twitter: "#",
       linkedin: "https://www.linkedin.com/in/richardcarrano/"
-    }
+    },
+    { 
+      imageSrc: "https://media-exp1.licdn.com/dms/image/C4E03AQES_pyHrNMKGg/profile-displayphoto-shrink_400_400/0/1517715249061?e=1647475200&v=beta&t=P7jfgqLQ1gNuGW_A8HPBryioeDh9vYef5ZvKL4px4qw",
+      title: "Vivek Boray",
+      description: "Locus.sh",
+      twitter: "https://twitter.com/BorayVivek",
+      linkedin: "https://www.linkedin.com/in/viveknboray/"
+    },
   ];
 
   return (
@@ -239,9 +197,6 @@ export default () => {
                     <span className="title">{card.title || "First Last"}</span>
                     </span>
                     <SocialLinksContainer>
-                    <SocialLink href={card.twitter}>
-                        <TwitterIcon />
-                    </SocialLink>
                     <SocialLink href={card.linkedin}>
                         <LinkedInIcon />
                     </SocialLink>

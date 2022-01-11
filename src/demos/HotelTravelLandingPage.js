@@ -34,7 +34,7 @@ export const NavLink = tw.a`
 
 const navLinks = [
   <NavLinks key={1}>
-    <PrimaryLink href="/#">
+    <PrimaryLink target="_blank" href="http://portal.defynance.com/">
       Sign in
     </PrimaryLink>
   </NavLinks>
