@@ -237,9 +237,6 @@ export default () => {
                     </span>
                     <span className="textContainer">
                     <span className="title">{card.title || "First Last"}</span>
-                    <p className="description">
-                        {card.description || "Organization"}
-                    </p>
                     </span>
                     <SocialLinksContainer>
                     <SocialLink href={card.twitter}>
