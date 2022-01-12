@@ -34,24 +34,24 @@ export default ({
   heading = "Frequently Asked Questions",
   faqs = [
     {
-      question: "Tax deferral",
+      question: "What is a defynance ISA?",
       answer:
-        "Answer to question 1 expanded here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna etiam tempor orci eu lobortis elementum nibh tellus. Aenean euismod elementum nisi quis eleifend."
+        "An Income Share Agreement (ISA) is an innovative funding method where a person contractually agrees to share a percent of their income with an ISA investor for a set payment term in exchange for an amount of financing up front. For example, a person may agree to share 4% of their income for 10 years in exchange for $15,000 financing.  As a funding model, ISAs are a more fair alternative to loans."
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "How do I know if Defynance is right for me ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "An ISA could be a useful financing method for anyone as a socially responsible alternative to loans. If you are looking for a better financing method with built-in downside protections, an ISA is right for you.  If you are not a fan of compounding interest that adds to your hardship or debt producing loans then an ISA is an ideal solution.  Most importantly, an ISA is a balanced financing method that protects you and rewards the investor for empowering you to realize your potential without the potentially crippling burden of debt."
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "What is the minimum credit score to apply ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "We do not have a minimum required credit score to apply for our ISA refinancing program. While credit score is a factor, we use forward looking indicators that predict future earning potential, instead of just backward looking indicators such as a credit score."
     },
     {
-      question: "Where can I reach you for support ?",
+      question: "Is there a prepayment option with an ISA ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Yes, there is a prepayment option with an ISA.  Someone can either prepay whenever they are able to or if their income substantially increases, the ISA may end early if the payment cap is reached prior to the payment term expiring.  This makes ISAs an excellent option even for those who expect their income to rise faster than originally expected."
     }
   ]
 }) => {

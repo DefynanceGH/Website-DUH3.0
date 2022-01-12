@@ -46,7 +46,7 @@ export default () => (
       <NavLink><Link tw="no-underline text-white" to="/">Defynance ISA</Link></NavLink>
       <NavLink><Link tw="no-underline text-white" to="/resources">Resources</Link></NavLink>
       <NavLink><Link tw="no-underline text-white" to="/investors">Investors</Link></NavLink>
-      <NavLink>About Us</NavLink>
+      <NavLink><Link tw="no-underline text-white" to="/about">About Us</Link></NavLink>
     </NavLinks>
     <Hero />
     <Features />

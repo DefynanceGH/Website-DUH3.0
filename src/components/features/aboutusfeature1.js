@@ -11,11 +11,11 @@ import CreditIcon from "../../images/gauge-solid.svg";
 const Container = tw.div`relative bg-gray-200`;
 
 const ThreeColumnContainer = styled.div`
-  ${tw`flex flex-col items-start md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
+  ${tw`flex flex-col items-start md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto pb-10`}
 `;
-const Heading = tw(SectionHeading)`pt-12 w-full ml-6 text-center text-primary-100`;
+const Heading = tw(SectionHeading)`pt-12 w-full font-bold ml-6 my-0 text-center text-primary-100`;
 
-const Subheading = tw.h3`mx-auto w-2/4 text-center font-bold text-black`
+const Subheading = tw.h3`mx-auto w-4/6 text-center font-bold text-black`
 
 const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 flex`}
@@ -24,9 +24,9 @@ const Column = styled.div`
 const Card = styled.div`
   ${tw`flex flex-col mx-auto max-w-xs px-6 py-10 border-2 bg-white rounded-lg mt-12`}
   .imageContainer {
-    ${tw`border-2 border-primary-500 text-center rounded-full p-2 flex-shrink-0 relative`}
+    ${tw`border-2 border-primary-500 text-center rounded-full p-2 relative`}
     img {
-      ${tw`w-20 h-20`}
+      ${tw`w-24 h-24`}
     }
   }
 
@@ -39,19 +39,12 @@ const Card = styled.div`
   }
 
   .description {
-    ${tw`mt-3 font-semibold text-secondary-100 text-sm leading-loose`}
+    ${tw`mt-3 px-8 font-semibold text-black text-sm leading-none`}
   }
 `;
 
 
 export default () => {
-  /*
-   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component):
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  If a key for a particular card is not provided, a default value is used
-   */
 
   const cards = [
     {
@@ -71,9 +64,10 @@ export default () => {
 
   return (
     <Container>
-        <Heading><p tw="text-black text-base">WHAT DRIVES US</p>Our Mission</Heading>
+        <Heading><p tw="text-black text-xl font-semibold my-0">WHAT DRIVES US</p>Our Mission</Heading>
         <Subheading>We make a positive impact on the lives of student loan holders to optimize their goals through financial solutions.</Subheading>
       <ThreeColumnContainer>
+        <Heading><p tw="text-black text-xl font-semibold my-0 pt-0">HOW WE OPERATE</p>Core Values</Heading>
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>

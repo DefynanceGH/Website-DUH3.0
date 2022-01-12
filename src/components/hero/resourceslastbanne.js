@@ -27,21 +27,20 @@ const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-25`;
 
 const HeroContainer = tw.div`z-20 relative px-4 sm:px-8 max-w-screen-xl mx-auto`;
 const TwoColumn = tw.div`pt-24 pb-32 px-4 flex justify-between items-center flex-col lg:flex-row`;
-const LeftColumn = tw.div`p-8 pr-32 bg-black flex flex-col items-center lg:block`;
+const LeftColumn = tw.div`p-8 bg-black flex flex-col items-center lg:block`;
 
 const Heading = styled.h1`
-  ${tw`text-lg text-center lg:text-left sm:text-lg lg:text-lg xl:text-lg font-black text-gray-100 leading-none`}
+  ${tw`text-lg text-left lg:text-left sm:text-lg lg:text-lg xl:text-lg font-bold text-gray-100 leading-none my-0 w-2/4`}
   span {
     ${tw`inline-block mt-2`}
   }
 `;
 
-const Notification = tw.span`inline-block w-64 my-4 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-base`;
+const Notification = tw.span`inline-block w-3/4 my-4 py-1 text-gray-100 border-l-4 border-blue-500 font-normal text-base`;
 
 const PrimaryAction = tw(NavLink)`
-px-4 py-2 rounded text-primary-500 bg-white
-hocus:bg-gray-100 hocus:text-primary-600 focus:shadow-outline
-border-b-0 cursor-pointer no-underline mx-0
+px-4 py-2 rounded text-primary-600 bg-white border-solid border-primary-600
+hocus:bg-gray-100 hocus:text-primary-600 focus:shadow-outline cursor-pointer no-underline mx-0
 `;
 
 export default () => {
@@ -52,13 +51,13 @@ export default () => {
       <HeroContainer>
         <TwoColumn>
           <LeftColumn>
-            <Heading>
+            <Heading tw="mr-0">
               <span tw="text-yellow-100">Is it time for a raise?</span>
             </Heading>
             <Notification >Find career resources to learn new skills or even start your own business.</Notification>
             <br />
             <br />
-            <PrimaryAction target="_blank" href="http://portal.defynance.com/signup">Create an Account</PrimaryAction>
+            <PrimaryAction target="_blank" href="http://portal.defynance.com/signup">View Resources</PrimaryAction>
           </LeftColumn>
         </TwoColumn>
       </HeroContainer>

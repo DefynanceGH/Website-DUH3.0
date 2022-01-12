@@ -18,23 +18,23 @@ const Image = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`bg-cover bg-center h-80 lg:h-64 rounded rounded-b-none`
 ]);
-const Heading = tw(SectionHeading)`my-0  w-full text-center text-primary-100`;
+const Heading = tw(SectionHeading)`my-0  w-full font-bold text-left text-primary-100`;
 const Details = tw.div`p-6 rounded rounded-t-none flex-1 flex flex-col items-center text-center lg:block lg:text-left`;
 const MetaContainer = tw.div`flex items-center`;
 const Meta = styled.div`
-  ${tw`text-secondary-100 font-medium text-sm flex items-center leading-none mr-6 last:mr-0 mb-8`}
+  ${tw`mt-2 font-thin text-secondary-100 font-medium text-sm flex items-center leading-none mr-6 last:mr-0 mb-8`}
   svg {
     ${tw`w-4 h-4 mr-1`}
   }
 `;
 
-const Title = tw.h5`mt-4 mb-0 leading-snug font-bold text-lg`;
-const Description = tw.p`mt-2 text-sm text-secondary-100`;
+const Title = tw.h5`mt-4 mb-0 leading-snug font-bold text-lg text-primary-600`;
+const Description = tw.p`mt-2 text-sm text-black font-medium`;
 const Link = styled(PrimaryButtonBase).attrs({as: "a"})`
   ${tw`inline-block mt-4 text-sm font-semibold no-underline hocus:bg-primary-500`}
 `
 const PrimaryAction = styled(PrimaryButtonBase).attrs({as: "a"})`
-  ${tw`px-4 py-2 text-primary-500 no-underline rounded bg-white mx-auto border-solid border-primary-500 inline-block mt-10 text-sm font-semibold hocus:bg-gray-200 hocus:text-primary-600 focus:shadow-outline
+  ${tw`px-10 py-2 text-primary-600 no-underline rounded bg-white mx-auto border-solid border-primary-600 inline-block mt-10 text-sm font-semibold hocus:bg-gray-200 hocus:text-primary-600 focus:shadow-outline
   `}
 `
 
@@ -64,11 +64,11 @@ export default () => {
       url: "https://defynance.com/why-is-student-debt-a-social-issue/"
     },
     {
-      imageSrc:
-        "https://i2.wp.com/defynance.com/wp-content/uploads/2021/12/image-4.png?resize=1024%2C576&ssl=1",
+      imageSrc: "https://i2.wp.com/defynance.com/wp-content/uploads/2021/12/image-4.png?resize=1024%2C576&ssl=1",
       postdate: "December 20, 2021",
       title: "Student Loan Repayments Are Starting Soon: How To Prepare",
       description: <>As this year comes to an end, numerous individuals across the country are engulfed by the big question of student loan repayments.
+      <br />
       <br />
       <br />
       Though the Biden administration has expanded the student loan forgiveness to those who are in public service or working for non-profit organizations for a minimum of 10 years, the number of individuals benefiting from such relaxations is a very small percentage of the total number of loan holders.</>,
@@ -79,7 +79,7 @@ export default () => {
     <Container>
       <Content>
         <HeadingInfoContainer>
-          <Heading><p tw="text-black text-base">Articles and news</p>The Defynance Blog</Heading>
+          <Heading><p tw="text-black text-base font-semibold my-0">ARTICLES AND NEWS</p>The Defynance Blog</Heading>
         </HeadingInfoContainer>
         <ThreeColumn>
           {blogPosts.map((post, index) => (
@@ -94,7 +94,7 @@ export default () => {
                     </Meta>
                   </MetaContainer>
                   <Description>{post.description}</Description>
-                  <Link target="_blank" href={post.url}>Read Post</Link>
+                  <Link target="_blank" href={post.url}>Continue Reading</Link>
                 </Details>
               </Card>
             </Column>

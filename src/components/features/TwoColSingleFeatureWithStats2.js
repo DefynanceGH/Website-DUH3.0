@@ -19,8 +19,8 @@ const TextContent = tw.div`lg:py-8 text-center md:text-left inline`;
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`text-center md:text-left font-medium text-secondary-100`;
+)`mt-4 font-black font-bold text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+const Description = tw.p`text-center md:text-left font-medium text-black  `;
 
 
 
@@ -29,7 +29,7 @@ const Bullet = styled(BulletIcon)(props => [
 ]);
 
 export default ({
-  subheading = "Empower Financial Freedom",
+  subheading = "EMPOWER FINANCIAL FREEDOM",
   heading = (
     <>
       <span tw="text-primary-100">The Defynance ISA</span>
@@ -39,15 +39,15 @@ export default ({
     <>
       <div tw="justify-center">
         <Bullet tw=""/>
-        <h2 tw=" inline-block">Interest-free Refinancing</h2>
+        <h2 tw="ml-4 inline-block">Interest-free Refinancing</h2>
       </div>
       <div tw="justify-center">
         <Bullet/>
-        <h2 tw="inline-block">Affordable Payments</h2>
+        <h2 tw="ml-4 inline-block">Affordable Payments</h2>
       </div>
       <div tw="justify-center">
         <Bullet/>
-        <h2 tw="inline-block">Cash-back Savings</h2>
+        <h2 tw="ml-4 inline-block">Cash-back Savings</h2>
       </div>
     </>
   ),

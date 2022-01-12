@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {css} from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading as HeadingTitle, Subheading } from "components/misc/Headings.js";
 
-const Container = tw.div`relative bg-gray-200`;
+const Container = tw.div`relative bg-gray-200 px-48`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 const ThreeColumn = tw.div`flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap mx-32`;
 const Column = tw.div`mt-0 text-center`;
@@ -31,17 +31,17 @@ const Card = styled.div`
   }
 
   .title2 {
-    ${tw`font-bold text-xl text-white border-solid border-primary-500 bg-primary-500 p-6 rounded-full`}
+    ${tw`font-bold text-xl text-white border-solid border-primary-500 bg-primary-500 p-4 px-6 rounded-full`}
   }
 
   .description {
-    ${tw`mt-3 font-semibold text-secondary-100 text-sm leading-loose`}
+    ${tw`mt-3 font-semibold text-black text-sm`}
   }
 `;
 
 
 export default ({
-  subheading = "How it Works",
+  subheading = "HOW IT WORKS",
   heading = <>Getting a Defynance ISA</>,
 
 }) => {
@@ -68,7 +68,7 @@ export default ({
     },
     {
       title: "Affordable ISA Payments",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description: "Simply make your monthly payments on the due date. The amount is based on your income so it is always affordable.",
       url: "https://timerse.com"
     }
   ];
@@ -76,8 +76,8 @@ export default ({
     <Container>
       <Content>
         <HeadingInfoContainer>
-          {subheading && <Subheading>{subheading}</Subheading>}
-          <HeadingTitle tw="text-primary-100 my-0">{heading}</HeadingTitle>
+          {subheading && <Subheading  tw="my-0 font-semibold">{subheading}</Subheading>}
+          <HeadingTitle tw="font-bold text-primary-100 my-0">{heading}</HeadingTitle>
         </HeadingInfoContainer>
         <ThreeColumn>
           {blogPosts.map((card, index) => (

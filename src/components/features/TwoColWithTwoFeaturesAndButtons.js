@@ -11,21 +11,21 @@ import ClockIcon from "../../images/clock-regular.svg";
 import MoneyIcon from "images/hand-holding-usd-solid.svg"
 import FlagIcon from "images/flag-checkered-solid.svg"
 
-const Container = tw.div`relative`;
+const Container = tw.div`relative mx-32`;
 
 const ThreeColumnContainer = styled.div`
   ${tw`flex flex-col items-start md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
 `;
-const Heading = tw(SectionHeading)`w-full ml-6 text-left text-primary-100`;
+const Heading = tw(SectionHeading)`w-full ml-6 font-bold text-left text-primary-100`;
 
 const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/2 flex`}
 `;
 
 const Card = styled.div`
-  ${tw`flex px-6 py-8 border-2 border-solid border-primary-600 bg-white rounded-lg mt-12 mx-2`}
+  ${tw`flex px-6 py-4 border-2 border-solid border-primary-600 bg-white rounded-lg mt-12 mx-2`}
   .imageContainer {
-    ${tw`border-2 border-primary-500 text-center rounded-full p-2 flex-shrink-0 relative`}
+    ${tw`border-2 border-primary-500 text-center rounded-full p-2 relative`}
     img {
       ${tw`w-20 h-20`}
     }
@@ -36,23 +36,16 @@ const Card = styled.div`
   }
 
   .title {
-    ${tw`font-bold text-xl leading-none text-primary-600`}
+    ${tw`pb-16 font-bold text-xl leading-none text-primary-600`}
   }
 
   .description {
-    ${tw`mt-3 font-semibold text-secondary-100 text-sm leading-loose`}
+    ${tw`my-0 py-0 w-5/6 font-semibold text-black text-sm`}
   }
 `;
 
 
 export default () => {
-  /*
-   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component):
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  If a key for a particular card is not provided, a default value is used
-   */
 
   const cards = [
     {
@@ -81,7 +74,7 @@ export default () => {
   return (
     <Container>
       <ThreeColumnContainer>
-        <Heading><p tw="text-black text-base">Safeguards</p>Consumer Protections</Heading>
+        <Heading><p tw="font-semibold text-black text-base my-0">SAFEGUARDS</p>Consumer Protections</Heading>
         {cards.map((card, i) => (
           <Column key={i}>
             <Card >

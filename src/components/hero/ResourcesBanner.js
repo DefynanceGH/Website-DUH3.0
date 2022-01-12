@@ -19,16 +19,16 @@ const LeftColumn = tw.div`flex flex-col items-center lg:block`;
 
 
 const Heading = styled.h1`
-  ${tw`text-3xl text-center lg:text-left sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-100 leading-none`}
+  ${tw`text-3xl font-bold text-center lg:text-left sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-100 leading-none`}
   span {
     ${tw`inline-block mt-2`}
   }
 `;
 
-const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-sm`;
+const Notification = tw.span`inline-block my-4 py-1 text-gray-100 border-l-4 border-blue-500 font-medium text-xl`;
 
 const PrimaryAction = tw(NavLink)`
-lg:mx-2
+lg:mx-0
 px-8 py-3 rounded text-gray-100 bg-primary-600
 hocus:bg-primary-500 hocus:text-gray-200 focus:shadow-outline
 border-b-0 cursor-pointer no-underline
@@ -43,13 +43,13 @@ export default () => {
         <TwoColumn>
           <LeftColumn>
             <Heading>
-              <span tw="text-primary-100">R</span><span>ESOURCES FOR</span>
+              <span tw="font-bold text-primary-100">R</span><span tw="font-bold">ESOURCES FOR</span>
               <br />
-              <span tw="text-primary-100">O</span><span>PTIMIZING</span>
+              <span tw="font-bold text-primary-100">O</span><span tw="font-bold">PTIMIZING</span>
               <br/>
-              <span tw="text-primary-100">E</span><span>ARNING</span>
+              <span tw="font-bold text-primary-100">E</span><span tw="font-bold">ARNING</span>
               <br />
-              <span tw="text-primary-100">P</span><span>OTENTIAL</span>
+              <span tw="font-bold text-primary-100">P</span><span tw="font-bold">OTENTIAL</span>
             </Heading>
             <Notification tw="block my-0">FREE Defynance Account.</Notification>
             <Notification tw="block my-0">FREE Resources for Improvement.</Notification>

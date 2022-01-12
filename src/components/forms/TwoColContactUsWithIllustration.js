@@ -18,19 +18,19 @@ const TextColumn = styled(Column)(props => [
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`;
+const Subheading = tw(SubheadingBase)`font-semibold text-center md:text-left`;
 const Heading = tw(SectionHeading)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`
 
 const PrimaryAction = styled(PrimaryButtonBase).attrs({as: "a"})`
-  ${tw` text-white no-underline rounded bg-primary-500 mx-auto inline-block mb-10 text-sm font-semibold hocus:bg-white hocus:text-primary-600 focus:shadow-outline
+  ${tw` text-white no-underline rounded bg-primary-600 mx-auto inline-block mb-10 text-sm font-semibold hocus:bg-primary-500 hocus:text-white focus:shadow-outline
   `}
 `
 
 export default ({
-  subheading = "Contact Us",
+  subheading = "CONTACT US",
   heading = <>Still have questions?</>,
-  description = <><span tw="font-bold text-black">You don’t have to fight your student debt battle alone. Defynance is your partner and we are here to help.</span><br/><span tw="text-sm">If you can’t find the information you are searching for, please visit our FAQ page or contact us. </span></>,
+  description = <><span tw="font-bold text-black">You don’t have to fight your student debt battle alone. Defynance is your partner and we are here to help.</span><br/><span tw="text-sm text-black">If you can’t find the information you are searching for, please visit our FAQ page or contact us. </span></>,
   textOnLeft = true,
 }) => {
 
@@ -40,12 +40,12 @@ export default ({
       <TwoColumn>
         <TextColumn tw="m-auto block">
             <PrimaryAction href="/faqs"tw="w-96 my-6 text-center">View FAQ</PrimaryAction>
-            <PrimaryAction href="/contact"tw="w-96 my-6 text-center" tw="w-96 text-center">Contact Us</PrimaryAction>
+            <PrimaryAction href="/contact"tw="w-96 border-solid hocus:bg-primary-500 hocus:text-white my-6 text-center bg-white text-primary-600" tw="w-96 text-center">Contact Us</PrimaryAction>
         </TextColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
             {subheading && <Subheading>{subheading}</Subheading>}
-            <Heading tw="text-primary-100">{heading}</Heading>
+            <Heading tw="font-bold text-primary-100">{heading}</Heading>
             <Description>{description}</Description>
           </TextContent>
         </TextColumn>

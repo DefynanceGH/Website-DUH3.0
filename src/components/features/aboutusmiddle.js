@@ -5,7 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { NavLinks } from "../headers/light.js";
 
-const Container = tw.div`relative bg-primary-500`;
+const Container = tw.div`relative bg-primary-600`;
 const TwoColumn = tw.div`flex flex-col w-3/4 md:flex-row justify-between max-w-screen-xl mx-auto `;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const TextColumn = styled(Column)(props => [
@@ -16,22 +16,22 @@ const TextColumn = styled(Column)(props => [
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
-const Subheading = tw(SubheadingBase)`text-white text-center md:text-left`;
-const Heading = tw(SectionHeading)`my-0 pt-12 w-full text-center text-white`;
+const Subheading = tw(SubheadingBase)`text-white text-center md:text-left font-thin text-sm`;
+const Heading = tw(SectionHeading)`my-0 pt-2 w-full text-center text-white font-bold`;
 
-const Description = tw.a`no-underline text-white mt-4 text-center hocus:text-yellow-100 hocus:cursor-pointer md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed`
+const Description = tw.a`no-underline text-yellow-200 mt-4 text-center hocus:text-yellow-100 hocus:cursor-pointer md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed`
 
 export default () => {
 
 
   return (
     <Container>
-        <Heading><p tw="text-white text-base">Press center</p>Defynance in the News</Heading>
+        <Heading><p tw="text-white text-base mb-0 font-thin">PRESS CENTER</p>Defynance in the News</Heading>
       <TwoColumn>
         <TextColumn >
             <TextContent>
                 <Description target="_blank" href="https://www.83degreesmedia.com/innovationnews/startup-takes-on-student-loan-crisis-030519.aspx">“Defynance: Tampa startup takes on student loan crisis”</Description>
-                <Subheading>83 Degrees Media</Subheading>
+                <Subheading tw="text-right">83 Degrees Media</Subheading>
             </TextContent>
         </TextColumn>
         <TextColumn>
@@ -45,7 +45,7 @@ export default () => {
         <TextColumn >
             <TextContent>
                 <Description target="_blank" href="https://www.embarccollective.com/featured-founder-farrukh-siddiqui-of-defynance/">“Featured Founder: Farrukh Siddiqui of Defynance”</Description>
-                <Subheading>Embarc Collective</Subheading>
+                <Subheading tw="text-right">Embarc Collective</Subheading>
             </TextContent>
         </TextColumn>
         <TextColumn>

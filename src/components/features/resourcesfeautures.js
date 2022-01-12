@@ -6,7 +6,6 @@ import { css } from "styled-components/macro";
 import { SectionHeading } from "components/misc/Headings.js";
 import defaultCardImage from "images/shield-icon.svg";
 import arrowImage from "images/longrightarrow.svg";
-import SavingIcon from "images/piggy-bank-solid.svg";
 import TeamIcon from "images/teamwork.svg";
 import WellNessIcon from "images/wellness.svg";
 import CreditIcon from "images/credit.svg";
@@ -23,7 +22,7 @@ const Container = tw.div`relative bg-gray-200`;
 const ThreeColumnContainer = styled.div`
   ${tw`flex flex-col items-start md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
 `;
-const Heading = tw(SectionHeading)`w-full ml-6 text-left text-primary-100`;
+const Heading = tw(SectionHeading)`w-full ml-6 text-left text-primary-100 font-bold`;
 
 const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 flex`}
@@ -59,19 +58,12 @@ const Card = styled.div`
   }
 
   .description {
-    ${tw`mt-3 font-semibold text-secondary-100 text-sm leading-loose`}
+    ${tw`mt-3 font-semibold text-black text-sm`}
   }
 `;
 
 
 export default () => {
-  /*
-   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component):
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  If a key for a particular card is not provided, a default value is used
-   */
 
   const cards = [
     {
@@ -104,7 +96,7 @@ export default () => {
   return (
     <Container>
       <ThreeColumnContainer>
-        <Heading><p tw="text-black text-base">personal and professional help</p>Ecosystem of Resources</Heading>
+        <Heading><p tw="text-black text-base font-semibold m-0">PERSONAL AND PROFESSIONAL HELP</p>Ecosystem of Resources</Heading>
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>
